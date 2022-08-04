@@ -1,0 +1,8 @@
+{
+  "appId": "optim.firstapp.ionic",
+  "appName": "helloworld",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

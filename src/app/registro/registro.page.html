@@ -1,0 +1,130 @@
+ 
+<ion-content class="fondo">
+<ion-card class="border">
+  <ion-card-content>
+    <img class="letras" src="assets/img/letra_gas.png"/>
+     <img class="logo" src="assets/img/logo_gas.png"/>
+     
+  </ion-card-content>
+<ion-row class="ion-justify-content-center">
+     <ion-label>Registro Chofer</ion-label>
+  </ion-row>
+</ion-card>
+
+<ion-card class="border">
+
+  <ion-card-content>
+
+    <form [formGroup]="todo" (ngSubmit)="addAdmin()">
+
+     <div *ngIf="!todo.controls.nombre.valid && todo.controls.nombre.dirty" class="error-message"> Este campo no puede estar vacío</div>
+
+     <ion-item class="item" lines="none">
+     <ion-input 
+     [(ngModel)]="datos_User.nombre"
+     class="border" 
+     type="text" 
+     placeholder="Nombre" 
+     formControlName="nombre">
+     </ion-input>
+    </ion-item>
+
+      <div *ngIf="!todo.controls.apellido.valid && todo.controls.apellido.dirty" class="error-message">Este campo no puede estar vacío </div>
+
+     <ion-item class="item"lines="none"> 
+     <ion-input
+      [(ngModel)]="datos_User.apellido"
+     type="email"
+     placeholder="Apellidos" 
+     formControlName="apellido">
+     </ion-input>
+
+    </ion-item>
+
+
+      <!--inicio-->
+      <div *ngIf="!todo.controls.email.valid && todo.controls.email.dirty" class="error-message">Este campo no puede estar vacío</div>
+            
+         <ion-item class="item" lines="none"> 
+         <ion-input
+      [(ngModel)]="datos_User.email"
+         type="text" 
+         placeholder="Correo electronico" 
+         formControlName="email">
+         </ion-input>
+      </ion-item>
+
+        <ion-item class="item" lines="none"> 
+         <ion-input
+      [(ngModel)]="datos_User.celular"
+         type="tel" 
+         placeholder="Celular" 
+         formControlName="celular">
+         </ion-input>
+      </ion-item>
+      <!--fin-->
+       <div *ngIf="!todo.controls.placa.valid && todo.controls.placa.dirty" class="error-message">Este campo no puede estar vacío</div>
+        
+   <ion-item class="item" lines="none"> 
+   <ion-input
+   [(ngModel)]="datos_User.placa"
+   type="text" 
+   placeholder="Placa" 
+   formControlName="placa">
+   </ion-input>
+    </ion-item>
+<ion-row style="justify-content:center">
+
+      <ion-label style="font-size:12px">Distribuidora</ion-label>
+   
+</ion-row>
+
+ <ion-searchbar
+(ionChange)="searchLocal($event)"
+placeholder="Buscar Distribuidora">
+</ion-searchbar>
+<ion-segment (ionChange)="segmentChanged($event)" scrollable value="heart">
+  <ion-segment-button value="{{item.distribuidora}}"
+  *ngFor="let item of distribuidoras | filtro:textoBuscar:'distribuidora'" value="home">
+    <ion-label style="font-size:8px">{{item.distribuidora}}</ion-label>
+  </ion-segment-button>
+ 
+</ion-segment >
+
+    
+      <!--inicio-->
+       <div *ngIf="!todo.controls.clave.valid && todo.controls.clave.dirty" class="error-message">Este campo no puede estar vacío</div>
+        
+   <ion-item style="margin-top: 10px" class="item" lines="none"> 
+   <ion-input
+   [(ngModel)]="datos_User.clave"
+   type="password" 
+   placeholder="Contraseña" 
+   formControlName="clave">
+   </ion-input>
+    </ion-item>
+      <div *ngIf="!todo.controls.claveconfirm.valid && todo.controls.claveconfirm.dirty" class="error-message">Este campo no puede estar vacío</div>
+        
+   <ion-item class="item" lines="none"> 
+   <ion-input
+   [(ngModel)]="datos_User.claveconfirm"
+   type="password" 
+   placeholder="Repetir Contraseña" 
+   formControlName="claveconfirm">
+   </ion-input>
+    </ion-item>
+
+    <ion-row>
+            <ion-col>  <ion-button class="ingresa-bt" routerLink="/login" size="small" expand="block" shape="round" >&nbsp;&nbsp;&nbsp;&nbsp;Regresar&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>  </ion-col>
+            <ion-col > <ion-button class="registro-bt" type="summit" size="small" expand="block" shape="round" >Aceptar</ion-button>   </ion-col>
+    </ion-row>
+        
+  
+      
+    </form>
+    
+  </ion-card-content>
+</ion-card>
+    
+
+</ion-content>

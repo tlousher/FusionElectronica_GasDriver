@@ -1,0 +1,34 @@
+
+<ion-split-pane>
+        <ion-menu contentId="content">
+             <ion-header>
+                <ion-toolbar class="menu-header">
+                 
+               
+                  <ion-row style="justify-content:center">
+                  <ion-button (click)="goToPageHome()" style="--background:dimgrey;">
+                    <img class="logo" src="assets/img/letra_gas.png">
+                    </ion-button>
+                 </ion-row>
+                 
+              
+
+                </ion-toolbar>
+              </ion-header>
+               <ion-content class="fondo-map">
+          <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let page of pages">
+            <ion-item (click)="ruta(page.title)" routerDirection="forward" 
+            >
+                <ion-icon [name]="page.icon" slot="start"></ion-icon>
+                   {{page.title}} 
+            </ion-item>
+          </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+        </ion-menu>
+    <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>
+
+
+             

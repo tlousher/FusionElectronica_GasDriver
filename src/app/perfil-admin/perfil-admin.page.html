@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-button (click)="backMenu()">
+      <ion-icon slot="icon-only" name="menu"></ion-icon>
+      
+     </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+  </ion-buttons>
+     <ion-title>Perfil</ion-title>
+</ion-toolbar>
+</ion-header>
+ 
+<ion-content >
+
+  <ion-card class="custom">
+      <ion-card-content>
+         <img src="assets/img/logo-manager.png"/>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-row class="local ion-justify-content-center">
+     <img src="{{this.pathFotoLocal}}" *ngIf="!!this.pathFotoLocal" />
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+     <ion-label>Promociones Vigentes</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+     <ion-label class="custom-label">Entradas</ion-label>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-list></ion-list>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-list></ion-list>
+  </ion-row>
+   <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+    <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+    <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+    <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+    <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+    <ion-row class="ion-justify-content-center">
+    <ion-label class="custom-label">Combos</ion-label>
+   </ion-row>
+</ion-content>
+
+
+

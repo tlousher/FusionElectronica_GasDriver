@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-row class="ion-justify-content-center">
+    
+        <img class="letras" src="assets/img/letra_gas.png">
+         <img class="logo" src="assets/img/logo_gas.png"/>
+      </ion-row>
+     
+    
+    <ion-buttons slot="secondary">
+     
+      <ion-icon style="color:dimgrey;width:35px" name="home"></ion-icon>
+      
+  </ion-buttons>
+</ion-toolbar>
+  
+</ion-header>
+ 
+<ion-content class="fondo-map">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+   <ion-row *ngIf="pedidos.length!=0"
+   style="justify-content:center;margin-top:15px">
+          <ion-label class="nombre">Pedidos Clientes</ion-label>
+        </ion-row>
+        <ion-row  *ngIf="pedidos.length==0" style="justify-content:center">
+        <ion-label style="color:red;margin-top:20px">Sin Pedidos</ion-label>
+        </ion-row>
+
+<ion-card *ngFor="let p of pedidos" >
+ 
+  <ion-card-header>
+ <img class="pedido" src="assets/img/logo_gas.png"/>
+  </ion-card-header>
+   <ion-row style="justify-content:center">
+        
+          <ion-label style="color:brown">Datos Cilindro</ion-label>
+         
+      </ion-row>
+     <ion-row style="justify-content:center">
+       
+          <ion-label style="color:black">tipo:&nbsp;{{p.tipo}}</ion-label>
+         
+      </ion-row>
+      <ion-row style="justify-content:center">
+        
+          <ion-label style="color:black">{{p.color_cilindro1}}
+          ({{p.cant_cilindro1}})&nbsp;{{p.color_cilindro2}}
+          ({{p.cant_cilindro2}})</ion-label>
+         
+      </ion-row>
+      
+      
+       <ion-row style="justify-content:center">
+        
+          <ion-label style="color:brown">Dirección</ion-label>
+         
+      </ion-row>
+       
+       <ion-row style="justify-content:center">
+        
+          <ion-label style="color:black">{{p.ubicacion.calle_principal}}
+         </ion-label>
+         
+      </ion-row>
+       <ion-row style="justify-content:center">
+        
+          <ion-label style="color:black">{{p.ubicacion.calle_secundaria}}
+         </ion-label>
+         
+      </ion-row>
+       <ion-row style="justify-content:center">
+        
+          <ion-label style="color:black">Número Casa:&nbsp;{{p.ubicacion.numero_casa}}
+          </ion-label>
+         
+      </ion-row>
+      
+      <ion-row class="bt">
+          <ion-button (click)="aceptarPedido(p.email,p.id)">Aceptar</ion-button>
+         </ion-row>
+    
+</ion-card>
+     
+
+   
+</ion-content>
+
+
+

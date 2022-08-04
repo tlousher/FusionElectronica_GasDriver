@@ -1,0 +1,63 @@
+
+<ion-content class="fondo">
+
+  <ion-card class="border">
+      <ion-card-content>
+       <img class="letras" src="assets/img/letra_gas.png"/>
+         <img class="logo" src="assets/img/logo_gas.png"/>
+      </ion-card-content>
+  </ion-card>
+
+   <ion-card class="border">
+    <ion-card-content>
+      <form [formGroup]="todo" (ngSubmit)="logForm()">
+        
+
+     <ion-item lines="none">
+     
+       <ion-input type="text" placeholder="E-mail" formControlName="email"></ion-input>
+        <ion-icon class="margin-icon" name="mail" slot="start"></ion-icon>
+      
+    </ion-item>
+           
+           
+   
+    <ion-item lines="none">
+
+        <ion-icon class="margin-icon" name="lock" slot="start"></ion-icon>
+        <ion-input 
+        
+        (keypress)="eventHandler($event)"
+        type="{{type}}" 
+        placeholder="Contraseña" 
+        formControlName="clave">
+        </ion-input>
+        <ion-icon 
+        class="eye-icon" 
+        [name]="type==='password' ? 'eye' : 'eye-off'" 
+        slot="end"
+        (click)="showPassword()">
+        </ion-icon>
+      
+
+      
+    </ion-item>
+    
+         <ion-row style="text-align: center">
+           <ion-col size="" >   <button class="recordar-bt" mat-button routerLink="/resetpass">Olvidé mi contraseña</button>  </ion-col>
+         </ion-row>
+         
+         <ion-row>
+            <ion-col > <ion-button class="ingresa-bt" routerLink="/registro" size="small" expand="block" shape="round" >Registrate</ion-button>   </ion-col>
+            <ion-col>  <ion-button class="registro-bt" type="summit" size="small" expand="block" shape="round" >&nbsp;&nbsp;&nbsp;&nbsp;Ingresa&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>  </ion-col>
+           
+         </ion-row>
+         
+                 
+    </form>
+    
+  </ion-card-content>
+</ion-card>
+
+ 
+</ion-content>

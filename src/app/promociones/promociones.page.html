@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-button (click)="backMenu()">
+      <ion-icon slot="icon-only" name="menu"></ion-icon>
+      
+     </ion-button>
+     
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      
+  
+  </ion-buttons>
+    <ion-title>Promociones</ion-title>
+</ion-toolbar>
+   
+</ion-header>
+ 
+<ion-content >
+
+  <ion-card class="custom">
+      <ion-card-content>
+         <img src="assets/img/logo-manager.png"/>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-row class="local ion-justify-content-center">
+     <img src="{{this.pathFotoLocal}}" *ngIf="!!this.pathFotoLocal"/>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+     <ion-label>Promociones</ion-label>
+  </ion-row>
+
+ 
+ <ion-row class="custom">
+     <ion-item lines="none">
+         
+          <ion-button 
+            class="button-bt" 
+            routerLink="/entradas" 
+            size="large" 
+            expand="block" 
+            shape="round">Entradas
+            <ion-icon  slot="start" class="margin-icon" name="arrow-forward"></ion-icon>
+            </ion-button>  
+           
+    
+    </ion-item>
+    </ion-row>
+    <ion-row class="custom">
+     <ion-item lines="none">
+         
+          <ion-button 
+            class="button-bt" 
+            routerLink="/combos" 
+            size="large" 
+            expand="block" 
+            shape="round">Combos
+            <ion-icon  slot="start" class="margin-icon" name="arrow-forward"></ion-icon>
+            </ion-button>  
+           
+    
+    </ion-item>
+    </ion-row>
+    <ion-row class="custom">
+     <ion-item lines="none">
+         
+          <ion-button 
+            class="button-bt" 
+            routerLink="/recompensas" 
+            size="large" 
+            expand="block" 
+            shape="round">Recompensas por puntos
+            <ion-icon  slot="start" class="margin-icon" name="arrow-forward"></ion-icon>
+            </ion-button>  
+           
+    
+    </ion-item>
+    </ion-row>
+    <ion-row class="custom">
+     <ion-item lines="none">
+         
+          <ion-button 
+            class="button-bt" 
+            routerLink="/vouchers" 
+            size="large" 
+            expand="block" 
+            shape="round">Vouchers para Pop
+            <ion-icon  slot="start" class="margin-icon" name="arrow-forward"></ion-icon>
+            </ion-button>  
+           
+    
+    </ion-item>
+    </ion-row>
+  
+</ion-content>
+
+
+

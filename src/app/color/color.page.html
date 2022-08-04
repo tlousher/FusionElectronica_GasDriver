@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-menu-button></ion-menu-button>
+      
+      <ion-title>Colores Cilindro</ion-title>
+     
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+       <ion-button class="icon" (click)="backHome()">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+    
+</ion-toolbar>
+  
+</ion-header>
+ 
+<ion-content class="fondo-map">
+
+ <ion-item >
+    <ion-label>Tipo cilindro</ion-label>
+   <ion-select 
+   (ionChange)="changeTipo()"
+   [(ngModel)]="tipo"
+   placeholder="Seleccionar">
+      <ion-select-option value="industrial">Industrial</ion-select-option>
+      <ion-select-option value="domestico">Doméstico</ion-select-option>
+    </ion-select>
+ </ion-item>
+
+  <ion-item class="item-select" >
+    <ion-label>Color 1</ion-label>
+    <ion-select
+     (ionChange)="changeColor1()"
+    [(ngModel)]="color1"
+    placeholder="Seleccionar">
+      <ion-select-option value="amarillo">Amarillo</ion-select-option>
+      <ion-select-option value="azul">Azul</ion-select-option>
+      <ion-select-option value="blanco">Blanco</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+      <ion-select-option value="tomate">Tomate</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+ <ion-item class="item-select" >
+    <ion-label>Color 2</ion-label>
+    <ion-select
+     (ionChange)="changeColor2()"
+    [(ngModel)]="color2"
+    placeholder="Seleccionar" >
+      <ion-select-option value="amarillo">Amarillo</ion-select-option>
+      <ion-select-option value="azul">Azul</ion-select-option>
+      <ion-select-option value="blanco">Blanco</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+      <ion-select-option value="tomate">Tomate</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+ <ion-row>
+            <ion-col > 
+            <ion-button 
+            class="aceptar"
+             size="small" 
+             expand="block" 
+             shape="round"
+             (click)="editar()" >Aceptar</ion-button>   </ion-col>
+    </ion-row>
+
+
+
+</ion-content>
+
+
+
+

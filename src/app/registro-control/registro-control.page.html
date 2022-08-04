@@ -1,0 +1,134 @@
+
+<ion-content class="fondo-map">
+<ion-card class="border">
+  <ion-card-content>
+    <img class="letras" src="assets/img/letra_gas.png"/>
+     
+     
+  </ion-card-content>
+  <ion-row class="ion-justify-content-center">
+     <ion-label>Registro 2</ion-label>
+    
+  </ion-row>
+  </ion-card>
+ 
+   
+<div id="map_canvas"></div>
+
+<ion-card *ngIf="agregarDireccion==false" class="border">
+
+  <ion-card-content>
+ 
+    <form [formGroup]="todo" (ngSubmit)="addAddressPrincipal()">
+
+     <ion-item lines="none">
+     <ion-label position="floating">Calle Principal</ion-label>
+     <ion-input 
+    
+     class="border" 
+     type="text"
+     value="{{this.streetPrincipal}}"
+     formControlName="calle1">
+     </ion-input>
+    </ion-item>
+    
+     <ion-item lines="none"> 
+        <ion-label position="floating">Calle Secundaria</ion-label>
+     <ion-input
+     
+     type="email"
+      
+     formControlName="calle2">
+     </ion-input>
+      </ion-item>
+
+         <ion-item lines="none"> 
+          <ion-label position="floating">Número de Casa</ion-label>
+         <ion-input
+    
+         type="number" 
+         formControlName="numcasa">
+         </ion-input>
+      </ion-item>
+      <!--fin-->
+     
+        
+   <ion-item lines="none"> 
+    <ion-label position="floating">Otros</ion-label>
+   <ion-input
+  
+   type="text" 
+   formControlName="otros">
+   </ion-input>
+    </ion-item>
+      <!--inicio-->
+      
+    <ion-row>
+            <ion-col>  <ion-button class="ingresa-bt" routerLink="/registro" size="small" expand="block" shape="round" >&nbsp;&nbsp;&nbsp;&nbsp;Regresar&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>  </ion-col>
+            <ion-col > <ion-button class="registro-bt" type="summit" size="small" expand="block" shape="round" >Aceptar</ion-button>   </ion-col>
+    </ion-row>
+        
+
+    </form>
+    
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="agregarDireccion==true" class="border">
+
+  <ion-card-content>
+ 
+    <form [formGroup]="todo1" (ngSubmit)="addAddressOpcional()">
+
+     <ion-item lines="none">
+     <ion-label position="floating">Calle Principal</ion-label>
+     <ion-input 
+    
+     class="border" 
+     type="text"
+     formControlName="calle1">
+     </ion-input>
+    </ion-item>
+    
+     <ion-item lines="none"> 
+        <ion-label position="floating">Calle Secundaria</ion-label>
+     <ion-input
+     
+     type="email"
+      
+     formControlName="calle2">
+     </ion-input>
+      </ion-item>
+
+         <ion-item lines="none"> 
+          <ion-label position="floating">Número de Casa</ion-label>
+         <ion-input
+     
+         type="number" 
+         formControlName="numcasa">
+         </ion-input>
+      </ion-item>
+      <!--fin-->
+     
+        
+   <ion-item lines="none"> 
+    <ion-label position="floating">Otros</ion-label>
+   <ion-input
+  
+   type="text" 
+   formControlName="otros">
+   </ion-input>
+    </ion-item>
+      <!--inicio-->
+      
+    <ion-row>
+            <ion-col>  <ion-button class="ingresa-bt" routerLink="/registro" size="small" expand="block" shape="round" >&nbsp;&nbsp;&nbsp;&nbsp;Regresar&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>  </ion-col>
+            <ion-col > <ion-button class="registro-bt" type="summit" size="small" expand="block" shape="round" >Aceptar</ion-button>   </ion-col>
+    </ion-row>
+        
+
+    </form>
+    
+  </ion-card-content>
+</ion-card>
+</ion-content>

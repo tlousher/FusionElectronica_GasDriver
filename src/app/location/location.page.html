@@ -1,0 +1,145 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-menu-button></ion-menu-button>
+      
+      <ion-title>Ubicaciones</ion-title>
+     
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+       <ion-button class="icon" (click)="backHome()">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+    
+</ion-toolbar>
+
+</ion-header>
+<ion-content class="fondo-map" >
+<div *ngIf="flagAdress==true" id="map"></div>
+<div id="otro" *ngIf="flagAdress==false">
+<ion-card class="pedido" *ngFor="let p of address">
+    
+  <ion-card-content>
+    <ion-grid class="aligner">
+     <ion-row>
+        <ion-col class="align">
+          <ion-label class="nombre">Ubicación:&nbsp;</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label class="">{{p.Ubicacion}}</ion-label>
+          </ion-col>
+      </ion-row>
+     <ion-row>
+        <ion-col class="align">
+          <ion-label class="nombre">Calle Principal:&nbsp;</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label class="">{{p.calle_principal}}</ion-label>
+          </ion-col>
+      </ion-row>
+        <ion-row>
+         <ion-col class="align">
+           <ion-label class="nombre">Calle Secundaria:&nbsp;</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{p.calle_secundaria}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+         <ion-col class="align">
+           <ion-label class="nombre">Número Casa:&nbsp;</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{p.numero_casa}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+         <ion-col class="align">
+           <ion-label class="nombre">Referencias:&nbsp;</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{p.otros}}</ion-label>
+          </ion-col>
+        </ion-row>
+    
+          <ion-row *ngIf="p.Ubicacion!='Principal' ">
+          <ion-col 
+          (click)="editar(p)"
+          class="align"> 
+            <ion-button class="ver" 
+            >&nbsp;&nbsp;
+            Editar&nbsp;&nbsp;
+            </ion-button> 
+            </ion-col>
+            
+          </ion-row>
+     </ion-grid>
+    
+  </ion-card-content>
+</ion-card>
+</div>
+ 
+ <ion-card class="editar" *ngIf="flagAdress==true" class="border">
+
+  <ion-card-content>
+ 
+    <form [formGroup]="todo" (ngSubmit)="editAddress()">
+
+     <ion-item lines="none">
+     <ion-label position="floating">Calle Principal</ion-label>
+     <ion-input  
+     type="text"
+     formControlName="calle1">
+     </ion-input>
+    </ion-item>
+    
+     <ion-item lines="none"> 
+        <ion-label position="floating">Calle Secundaria</ion-label>
+     <ion-input
+     type="text"
+     formControlName="calle2">
+     </ion-input>
+      </ion-item>
+
+         <ion-item lines="none"> 
+          <ion-label position="floating">Número de Casa</ion-label>
+         <ion-input
+         type="number" 
+         formControlName="numcasa">
+         </ion-input>
+      </ion-item>
+      <!--fin-->
+     
+        
+   <ion-item lines="none"> 
+    <ion-label position="floating">Otros</ion-label>
+   <ion-input
+  
+   type="text" 
+   formControlName="otros">
+   </ion-input>
+    </ion-item>
+      <!--inicio-->
+      
+    <ion-row>
+            <ion-col > <ion-button class="editar" type="summit" size="small" expand="block" shape="round" >Aceptar</ion-button>   </ion-col>
+    </ion-row>
+        
+
+    </form>
+    
+  </ion-card-content>
+</ion-card>
+
+          
+
+
+
+</ion-content>
+
+
+
+

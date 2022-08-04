@@ -1,0 +1,74 @@
+#map_canvas{
+    display: block;
+    height: 40% !important;
+    width: 100% !important;
+  
+  }
+  ion-toolbar{
+    --background:dimgrey;
+  }
+  ion-button{
+    color:black;
+    --background:rgb(255, 217, 0);
+    --color-activated:black;
+    --background-activated:rgb(255, 217, 10);
+  
+    
+  }
+    
+  ion-col.align{
+    text-align:end
+  }
+  img.letras{
+    width: 150px;
+  }
+  img.logo{
+    height: 35px;
+    margin-left: 10px;
+  }
+  .avatar {
+    width:42px;
+    height:42px;
+    //-webkit-border-radius: 50%;
+    //border-radius: 500%;
+    object-fit: cover;
+    margin-left: 100px;
+  }
+  ion-button.icon{
+  ion-icon{
+    color:aliceblue;
+  }
+  }
+  
+  ion-menu-button{
+  
+      color: aliceblue
+    
+  }
+  ion-row.bt{
+    justify-content: center;
+    ion-button{
+      margin-top: 10px;
+    }
+  }
+  ion-select.ubi{
+    ion-select-option{
+      font-size: 10px;
+    }
+  }
+  ion-card{
+    --background:floralwhite
+  }
+  img.pedido{
+    height: 7vh;
+    width: 5vh;
+    margin: auto;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  
+  
+  
+   
+   

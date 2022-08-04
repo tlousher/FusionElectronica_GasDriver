@@ -1,0 +1,72 @@
+ 
+<ion-content class="fondo">
+<ion-card class="border">
+  <ion-card-content>
+     <img class="letras" src="assets/img/letra_gas.png"/>
+     <img class="logo" src="assets/img/logo_gas.png"/>
+     
+     
+  </ion-card-content>
+<ion-row class="ion-justify-content-center">
+     <ion-label>Registro 3</ion-label>
+  </ion-row>
+</ion-card>
+
+<ion-card class="border">
+
+  <ion-card-content>
+
+    <form [formGroup]="todo" (ngSubmit)="loadData()">
+
+     <ion-item class="item-select">
+    <ion-label>Tipo</ion-label>
+    <ion-select placeholder="Seleccionar" 
+    formControlName="tipo" 
+   >
+      <ion-select-option value="industrial">Industrial</ion-select-option>
+      <ion-select-option value="domestico">Doméstico</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+      <ion-item class="item-select">
+    <ion-label>Color 1</ion-label>
+    <ion-select placeholder="Seleccionar" 
+    formControlName="color1" 
+    >
+      <ion-select-option value="amarillo">Amarillo</ion-select-option>
+      <ion-select-option value="azul">Azul</ion-select-option>
+      <ion-select-option value="blanco">Blanco</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+      <ion-select-option value="tomate">Tomate</ion-select-option>
+    </ion-select>
+  </ion-item>
+     
+ <ion-item class="item-select">
+    <ion-label>Color 2</ion-label>
+    <ion-select placeholder="Seleccionar" 
+    formControlName="color2" 
+   >
+      <ion-select-option value="amarillo">Amarillo</ion-select-option>
+      <ion-select-option value="azul">Azul</ion-select-option>
+      <ion-select-option value="blanco">Blanco</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+      <ion-select-option value="tomate">Tomate</ion-select-option>
+
+
+    </ion-select>
+  </ion-item>
+     
+    <ion-row>
+            <ion-col>  <ion-button class="ingresa-bt" routerLink="/registro-control" size="small" expand="block" shape="round" >&nbsp;&nbsp;&nbsp;&nbsp;Regresar&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>  </ion-col>
+            <ion-col > <ion-button class="registro-bt" type="summit" size="small" expand="block" shape="round" >Aceptar</ion-button>   </ion-col>
+    </ion-row>
+        
+  
+      
+    </form>
+    
+  </ion-card-content>
+</ion-card>
+    
+
+</ion-content>

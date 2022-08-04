@@ -1,0 +1,99 @@
+<ion-header>
+ <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-icon style="color:dimgrey;width:35px" name="home"></ion-icon>
+      </ion-buttons>
+      <ion-row class="ion-justify-content-center">
+    
+        <img class="letras" src="assets/img/letra_gas.png">
+         <img class="logo" src="assets/img/logo_gas.png"/>
+      </ion-row>
+     
+    
+    <ion-buttons slot="secondary">
+      <ion-icon style="color:dimgrey;width:35px" name="home"></ion-icon>
+      
+  </ion-buttons>
+</ion-toolbar>
+  
+</ion-header>
+ 
+<ion-content class="fondo-map">
+   <div id="map_canvas"></div>  
+<ion-card *ngFor="let p of pedido">
+ 
+  <ion-card-header>
+ 
+  </ion-card-header>
+      <ion-row style="justify-content:center">
+          <ion-label style="color:brown">Información del Cliente:</ion-label>
+      </ion-row>
+       <ion-row style="justify-content:center">
+       
+          <ion-label style="color:black">{{p.nombre}}&nbsp;{{p.apellido}}&nbsp;Cel.:{{p.celular}}</ion-label>
+         
+      </ion-row>
+       <ion-row style="justify-content:center">
+          <ion-label style="color:brown">Pedido:</ion-label>
+      </ion-row>
+     <ion-row style="justify-content:center">
+          <ion-label style="color:black">Tipo cilindro:&nbsp;{{p.tipo}}</ion-label>
+      </ion-row>
+      <ion-row style="justify-content:center">
+        
+          <ion-label style="color:black">{{p.color_cilindro1}}
+          cantidad&nbsp;{{p.cant_cilindro1}}</ion-label>
+         
+      </ion-row>
+      
+        <ion-row style="justify-content:center">
+        
+          <ion-label style="color:black">{{p.color_cilindro2}}
+          cantidad&nbsp;{{p.cant_cilindro2}}</ion-label>
+         
+      </ion-row>
+       <ion-row style="justify-content:center">
+          <ion-label style="color:brown">Ubicación Detallada:</ion-label>
+      </ion-row>
+
+       <ion-row style="justify-content:center">
+       
+          <ion-label style="color:black">Calle principal:
+          &nbsp;{{p.ubicacion.calle_principal}}
+          </ion-label>
+         
+      </ion-row>
+      <ion-row style="justify-content:center">
+       
+          <ion-label style="color:black">Calle secundaria:
+          &nbsp;{{p.ubicacion.calle_secundaria}}
+          </ion-label>
+         
+      </ion-row>
+        <ion-row style="justify-content:center">
+       
+          <ion-label style="color:black">Número de casa:
+          &nbsp;{{p.ubicacion.numero_casa}}
+          </ion-label>
+         
+      </ion-row>
+       <ion-row style="justify-content:center">
+       
+          <ion-label style="color:black">Referencia:
+          &nbsp;{{p.ubicacion.otros}}
+          </ion-label>
+         
+      </ion-row>
+        <ion-row class="bt">
+          <ion-button (click)="loadMapExternal()">Ruta Pedido</ion-button>
+         </ion-row>
+      <ion-row class="bt">
+          <ion-button (click)="presentAlertConfirm()">Finalizar Pedido</ion-button>
+         </ion-row>
+    
+</ion-card>
+
+</ion-content>
+
+
+

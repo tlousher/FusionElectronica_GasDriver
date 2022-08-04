@@ -1,0 +1,17 @@
+ion-toolbar{
+    --background:rgb(255, 157, 0);
+  }
+  .aligner ion-row ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    
+  } 
+  ion-button{
+    color:black;
+    --background:rgb(255, 157, 0);
+    --color-activated:black;
+    --background-activated:rgb(255, 157, 0);
+    
+}

@@ -1,0 +1,60 @@
+
+<ion-content class="fondo">
+<ion-card class="border">
+  <ion-card-content>
+      <img class="letras" src="assets/img/letra_gas.png"/>
+         <img class="logo" src="assets/img/logo_gas.png"/>
+     <ion-grid class="aligner">
+         
+         <ion-row>
+         <ion-col>
+           <ion-label>Recupera tu contraseña</ion-label>
+         </ion-col>
+         
+         </ion-row>
+     </ion-grid>
+  </ion-card-content>
+
+</ion-card>
+<ion-card class="border">
+
+  <ion-card-content>
+    <form [formGroup]="todo" (ngSubmit)="logForm()">
+ <div *ngIf="!todo.controls.email.valid && todo.controls.email.dirty" class="error-message">
+              Este campo no puede estar vacío
+           </div>
+
+     <ion-item lines="none">
+         
+      <ion-icon class="margin-icon" name="person" slot="start"></ion-icon>
+       <ion-input type="text" placeholder="Ingresa tu E-mail" formControlName="email"></ion-input>
+      
+    </ion-item>
+           
+     
+         <ion-row>
+            <ion-col >
+             <ion-button 
+             routerLink="/login" 
+             size="small" 
+             expand="block" shape="round" >Regresar</ion-button>   </ion-col>
+            <ion-col> 
+             <ion-button 
+             type="summit" 
+             size="small" 
+             expand="block" shape="round" >Resetear</ion-button>  </ion-col>
+           
+         </ion-row>
+            
+    </form>
+    
+   
+       
+        
+    
+    
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>

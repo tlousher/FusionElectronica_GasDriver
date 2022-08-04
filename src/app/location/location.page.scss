@@ -1,0 +1,92 @@
+#map{
+    display: block;
+    height: 40% !important;
+    width: 100% !important;
+    
+    
+  }
+ion-toolbar{
+    --background:dimgrey;
+  }
+  ion-button.ver{
+    color:black;
+    --background:rgb(255, 217, 0);
+    --color-activated:black;
+    --background-activated:rgb(255, 217, 10);
+  
+  }
+    
+  .aligner ion-row ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    
+  }
+  img.letras{
+    width: 150px;
+  }
+  img.logo{
+    height: 35px;
+    margin-left: 10px;
+  }
+  
+  ion-button.icon{
+  ion-icon{
+    color:aliceblue;
+  }
+  }
+  
+  ion-menu-button{
+      color: aliceblue
+  }
+  ion-card.pedido{
+      --background: floralwhite;
+      ion-label{
+          color:black
+      }
+  }
+  ion-card.editar{
+    --background:transparent;
+    ion-label{
+        color:white
+    }
+    
+}
+ion-button.editar{
+    height: 45px;
+    color:black;
+    --background:rgb(255, 217, 0);
+    --color-activated:black;
+    --background-activated:rgb(255, 217, 10);
+}
+
+  ion-item.item{
+    ion-input{
+      --background:transparent;
+      color:white;
+      //margin-left: 30px;
+      --padding-start:30px
+      } 
+      ion-label{
+        font-size:13px;
+        margin-left: 30px;
+        color: yellow;
+      }
+    --ion-safe-area-right: 0;
+    --padding-start: 0;
+    --padding-top: 0;
+    --padding-left: 0;
+    --background: rgba(0, 0, 0, 0.568);
+    
+    border-radius: 30px !important;
+    padding-left: 0px !important;
+    border: 0px solid #ffffff;
+    border-bottom: 0px !important;
+    box-shadow: none !important;
+    margin-bottom: 10px;
+    }
+  
+  
+   
+   
