@@ -5,17 +5,16 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class FirestoreService {
 
-  constructor(private angularFirestore: AngularFirestore)
-   { }
+  constructor(private angularFirestore: AngularFirestore) { }
     insertarAdministradores(coleccion, child, datos) {
     return this.angularFirestore.collection(coleccion).doc(child).set(datos);
-  } 
+  }
     insertarAdministradoresUpdate(coleccion, child, datos) {
     return this.angularFirestore.collection(coleccion).doc(child).update(datos);
   }
   insertarControl(coleccion, child, datos) {
     return this.angularFirestore.collection(coleccion).doc(child).set(datos);
-  } 
+  }
   public updateProfile(email, param): Promise<any> {
     return new Promise<any>((resolve, reject) => {
       this.angularFirestore.collection('drivers').doc(email).update(param).then((data) => {
@@ -25,12 +24,12 @@ export class FirestoreService {
       });
     });
   }
-  consultarUsuarios(coleccion,email) {
+  consultarUsuarios(coleccion, email) {
     return this.angularFirestore.collection(coleccion).doc(email).get();
   }
   consultarPorId(coleccion, documentId) {
     return this.angularFirestore.collection(coleccion).doc(documentId).snapshotChanges();
-  } 
+  }
   consultarData(coleccion, documentId) {
     return this.angularFirestore.collection(coleccion).
     doc(documentId).get();
@@ -38,7 +37,7 @@ export class FirestoreService {
   consultarDatos(coleccion) {
     return this.angularFirestore.collection(coleccion).snapshotChanges();
   }
-  deleteData(coleccion,child){
+  deleteData(coleccion, child) {
     return this.angularFirestore.collection(coleccion).doc(child).delete();
   }
 }
